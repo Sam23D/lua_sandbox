@@ -18,8 +18,11 @@ control_system.callback_table = {
 }
 
 control_system.handle_key_press = function ( key )
-  if key == "p" then debug.toggle_debug_draw(state.settings.debug_state) end
-  debug.log(key)
+  if key == "p" then 
+    debug.toggle_debug_draw(state.settings.debug_state) 
+    debug.log(key)
+  end
+  
 end
 
 return control_system
