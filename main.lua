@@ -3,6 +3,7 @@ local world = require "src.world.config"
 local state = require "src.state"
 local debug = require "src.debug"
 local ctrl_sys = require "src.controls.system"
+local char = require "src.character.character"
 
 function love.load()
    pixellari = love.graphics.setNewFont("assets/Roboto-Regular.ttf", 16)
@@ -35,4 +36,5 @@ end
 
 function love.draw()
     debug.draw_system( state.settings.debug_state )
+    char.draw()
 end
